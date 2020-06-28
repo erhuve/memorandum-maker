@@ -1,4 +1,5 @@
 import flask
+from flask import Flask
 import os
 import random
 import tensorflow as tf
