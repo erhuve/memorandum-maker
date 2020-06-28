@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+    <style>
+        .email {
+            margin: auto;
+            border-color: #57068c;
+            width: 800px;
+            font-family: Arial;
+        }
+
+        .box {
+            width: auto;
+            border-color: #57068c;
+            color: #57068c;
+        }
+
+        .bottom-border {
+            border-bottom: 1px solid gray;
+        }
+
+        img { 
+                width:50%; 
+                height:50%; 
+                margin: auto;
+                text-align: center;
+                display: block;
+            }
+
+        h1 {
+            font-size: 32px;
+            color: #57068c;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        button {
+            border-radius: 8px;
+            background-color:#57068c;
+            color: white;
+            font-size: 18px;
+            transition-duration: 0.4s;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #57068c;
+        }
+
+        .center {
+            text-align: center;
+            display: block;
+            margin: auto;
+        }
+    </style>
+
+    <head>
+        <title>NYU COVID-19 Summary Update Generator</title>
+    </head>
+
+    <body>
+        <div class="email">
+            <img src="/static/nyulogo.png">
+            <form action="{{url_for('main')}}" method='POST' class="center"><button type="submit">Get an update! (this may take some time *cough cough*)</button></form>
+            <p class="center"><strong>This is not officially affiliated with NYU. This is a student project made for fun.&nbsp</strong><a href="https://github.com/erhuve/memorandum-maker">Check it out on GitHub.</a></p>
+            <h1>Memorandum</h1>
+            <div id="date"></div><!--I bet you're about to hardcode some whitespace into your text, DAMN RIGHT-->
+            <p><strong>To:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe NYU Community</p>
+            <p><strong>From:</strong> &nbspNYU COVID-19 Summary Update Generator</p>
+            <p class="bottom-border"><strong>Re:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSummary Update on COVID-19-Related Developments<br></br></p>
+            <div class="result">{% if result %}<p>{{result}}</p>{% endif %}</div>
+            <img src="/static/keepsafe.jpg">
+        </div>
+        <script src="{{url_for('static', filename='script.js')}}""></script>
+    </body>
+
+
+</html>

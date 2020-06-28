@@ -1,0 +1,3 @@
+*.ipnyb
+training_checkpoints/
+__pycache__/
