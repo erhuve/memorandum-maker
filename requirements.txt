@@ -1,5 +1,5 @@
 Flask==1.1.2
 tensorflow==2.0.1
-setuptools==41.0.0
+setuptools==65.5.1
 gunicorn==19.9.0
 numpy
